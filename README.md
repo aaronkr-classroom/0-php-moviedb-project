@@ -1,103 +1,47 @@
-# Try Out Development Containers: PHP
+# PHP Codespace for MovieDB Project
 
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-php)
+이 Codespace는 Microsoft PHP Codespace 프로젝트에서 포크되었습니다.
 
-A **development container** is a running container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with **[GitHub Codespaces](https://github.com/features/codespaces)** or **[Visual Studio Code Dev Containers](https://aka.ms/vscode-remote/containers)**.
+1. MongoDB Atlas에 연결
+2. `moviedb` 컬렉션에 테이블의 영화 데이터를 추가합니다(`.js` Playground 파일 사용)
+3. PHP로 책의 앱을 개발합니다(MySQL 예제 사용)
+4. Codespace에서 앱을 실행하여 작동하는지 확인합니다.
+5. GitHub Desktop(또는 `.zip` 폴더)을 사용하여 프로젝트를 컴퓨터에 다운로드하여 개발을 계속합니다.
+6. 로컬 컴퓨터에서 MySQL의 Workbench를 실행합니다.
+7. 동일한 영화 데이터를 `moviedb_mysl` 테이블에 추가합니다.
+8. XAMMP를 다운로드하여 설치합니다.
+9. 프로젝트를 실행하고 발생하는 오류를 수정합니다.
+10. 프로젝트가 실행되는지 확인한 후 GitHub에 다시 업로드(또는 `commit` 및 `push`)합니다!
 
-This is a sample project that lets you try out either option in a few easy steps. We have a variety of other [vscode-remote-try-*](https://github.com/search?q=org%3Amicrosoft+vscode-remote-try-&type=Repositories) sample projects, too.
+---
+## 서버 실행:
 
-> **Note:** If you already have a Codespace or dev container, you can jump to the [Things to try](#things-to-try) section.
+- 터미널에서 `php -S 0.0.0.0:8000`을 실행합니다.
+- 이 새로운 포트에서 웹 앱에 액세스하려면 나타나는 알림에서 "브라우저에서 열기"를 클릭합니다.
+- '포트' 보기에서 전달된 포트의 정리된 표를 볼 수 있으며, **포트: 포트 보기에 집중** 명령으로 액세스할 수 있습니다.
+- '포트' 보기에서 포트 8000이 "Hello Remote World"라는 레이블이 지정되어 있습니다. `devcontainer.json`에서 전달된 포트의 레이블과 포트가 자동 전달될 때 수행할 작업과 같은 `"portsAttributes"`를 설정할 수 있습니다.
+- 터미널을 다시 살펴보면 사이트 탐색의 출력이 표시되어야 합니다.
 
-## Setting up the development container
+---
 
-### GitHub Codespaces
-Follow these steps to open this sample in a Codespace:
-1. Click the **Code** drop-down menu.
-2. Click on the **Codespaces** tab.
-3. Click **Create codespace on main**.
+This Codespace is forked from the Microsoft PHP Codespace project.
 
-For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
+1. Connect to MongoDB Atlas
+2. Add movie data from the Table to your `moviedb` collection (with a `.js` Playground file)
+3. Develop the app in the book in PHP (using the MySQL examples)
+4. Run the app in the Codespace to confirm it works
+5. Download the project to your computer using GitHub Desktop (or just the `.zip` folder) to continue development
+6. On your local computer, run MySQL's Workbench
+7. Add the same movie data to a `moviedb_mysl` Table
+8. Download and install XAMMP
+9. Try to run the Project and fix any errors that occur
+10. After confirming your project runs, reupload (or `commit` and `push`) it to GitHub!
 
-### VS Code Dev Containers
+---
+## Running a server:
 
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-php) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
-
-Follow these steps to open this sample in a container using the VS Code Dev Containers extension:
-
-1. If this is your first time using a development container, please ensure your system meets the pre-reqs (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
-
-2. To use this repository, you can either open the repository in an isolated Docker volume:
-
-    - Press <kbd>F1</kbd> and select the **Dev Containers: Try a Sample...** command.
-    - Choose the "PHP" sample, wait for the container to start, and try things out!
-        > **Note:** Under the hood, this will use the **Dev Containers: Clone Repository in Container Volume...** command to clone the source code in a Docker volume instead of the local filesystem. [Volumes](https://docs.docker.com/storage/volumes/) are the preferred mechanism for persisting container data.
-
-   Or open a locally cloned copy of the code:
-
-   - Clone this repository to your local filesystem.
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Open Folder in Container...** command.
-   - Select the cloned copy of this folder, wait for the container to start, and try things out!
-
-## Things to try
-
-Once you have this sample opened, you'll be able to work with it like you would locally.
-
-Some things to try:
-
-1. **Edit:**
-   - Open `index.php`
-   - Try adding some code and check out the language features.
-   - Make a spelling mistake and notice it is detected. The [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extension was automatically installed because it is referenced in `.devcontainer/devcontainer.json`.
-   - Also notice that utilities like `Xdebug` and the [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client) extension are installed. Tools are installed in the `mcr.microsoft.com/devcontainers/php` image and Dev Container settings and metadata are automatically picked up from [image labels](https://containers.dev/implementors/reference/#labels).
-
-
-1. **Terminal:** Press <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>\`</kbd> and type `uname` and other Linux commands from the terminal window.
-
-1. **Run and Debug:**
-   - Open `index.php`
-   - Add a breakpoint (e.g. on line 4).
-   - Press <kbd>F5</kbd> to launch the app in the container.
-   - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-
-1. **Running a server:**
-   - From the terminal, run `php -S 0.0.0.0:8000`
-   - Click "Open in Browser" in the notification that appears to access the web app on this new port.
-      - You can view an organized table of your forwarded ports in the 'Ports' view, which can be accessed with the command **Ports: Focus on Ports View**.
-      - Notice port 8000 in the 'Ports' view is labeled "Hello Remote World." In `devcontainer.json`, you can set `"portsAttributes"`, such as a label for your forwarded ports and the action to be taken when the port is autoforwarded.
-   - Look back at the terminal, and you should see the output from your site navigations.
-   - Edit the text on line 21 in `index.php` and refresh the page to see the changes immediately take effect.
-
-1. **Attach debugger to the server:**
-   - Follow the previous steps to start up a PHP server and open a browser on port `8000`
-   - Press <kbd>F1</kbd> and select the **View: Show Debug** command.
-   - Pick "Listen for XDebug" from the dropdown.
-   - Press <kbd>F5</kbd> to attach the debugger.
-   - Add a breakpoint to `index.php` if you haven't already.
-   - Reload your browser window.
-   - Once the breakpoint is hit, try hovering over variables, examining locals, and more.
-
-5. **Install Node.js using a Dev Container Feature:**
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Configure Container Features...** or **Codespaces: Configure Container Features...** command.
-   - Type "node" in the text box at the top.
-   - Check the check box next to "Node.js (via nvm) and yarn" (published by devcontainers) 
-   - Click OK
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
-
-## Contributing
-
-This project welcomes contributions and suggestions. Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## License
-
-Copyright © Microsoft Corporation All rights reserved.<br />
-Licensed under the MIT License. See LICENSE in the project root for license information.
+- From the terminal, run `php -S 0.0.0.0:8000`
+- Click "Open in Browser" in the notification that appears to access the web app on this new port.
+  - You can view an organized table of your forwarded ports in the 'Ports' view, which can be accessed with the command **Ports: Focus on Ports View**.
+  - Notice port 8000 in the 'Ports' view is labeled "Hello Remote World." In `devcontainer.json`, you can set `"portsAttributes"`, such as a label for your forwarded ports and the action to be taken when the port is autoforwarded.
+- Look back at the terminal, and you should see the output from your site navigations
