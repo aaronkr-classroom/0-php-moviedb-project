@@ -4,7 +4,7 @@
 
 1. MongoDB Atlas에 연결
 2. `moviedb` 컬렉션에 테이블의 영화 데이터를 추가합니다(`.js` Playground 파일 사용)
-3. PHP로 책의 앱을 개발합니다(MySQL 예제 사용)
+3. PHP로 책의 앱을 `/`또는 `webapp` 폴더에서 개발합니다(MySQL 예제 사용)
 4. Codespace에서 앱을 실행하여 작동하는지 확인합니다.
 5. GitHub Desktop(또는 `.zip` 폴더)을 사용하여 프로젝트를 컴퓨터에 다운로드하여 개발을 계속합니다.
 6. 로컬 컴퓨터에서 MySQL의 Workbench를 실행합니다.
